@@ -32,9 +32,11 @@
 #	7- sock.sendto(p.SerializeToString(), (UDP_IP, UDP_PORT))
 #packet.commands  = grSim_Commands_pb2.grSim_Commands()
 import socket
-#I have problem with importing from other file
-import grSim_Packet_pb2
-import grSim_Commands_pb2
+import pythonProto.grSim_Packet_pb2 as grSim_Packet_pb2
+import pythonProto.grSim_Commands_pb2 as grSim_Commands_pb2
+
+#import grSim_Packet_pb2
+#import grSim_Commands_pb2
 
 UDP_IP = "127.0.0.1"
 UDP_PORT = 20011

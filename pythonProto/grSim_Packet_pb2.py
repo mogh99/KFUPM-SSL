@@ -13,8 +13,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import grSim_Commands_pb2 as grSim__Commands__pb2
-import grSim_Replacement_pb2 as grSim__Replacement__pb2
+import pythonProto.grSim_Commands_pb2 as grSim__Commands__pb2
+import pythonProto.grSim_Replacement_pb2 as grSim__Replacement__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

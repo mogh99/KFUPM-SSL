@@ -3,7 +3,7 @@ import struct
 
 
 #I have probelm with importing the from other files
-import messages_robocup_ssl_wrapper_pb2 as wrapper
+import pythonProto.messages_robocup_ssl_wrapper_pb2 as wrapper
 
 MCAST_GRP = '224.5.23.2'
 MCAST_PORT = 10020
