@@ -32,3 +32,4 @@ Follow the installation instructions that are provided by the RoboCup-SSL [insta
 
 ## helpfull sources
 * [Small Size League](https://ssl.robocup.org)
+* [RoboCup SSL GitHub Page](https://github.com/RoboCup-SSL)
