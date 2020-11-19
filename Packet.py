@@ -27,17 +27,18 @@ class Packet:
 		#print (parser.detection)
 			pass
 		if parser.geometry.IsInitialized():
-			print (parser.geometry)
-		pass
+
+			#print (parser.geometry)
+			pass
 
 
 	def __init__(self, binary ):
 		self.info_robotY = []
 		self.info_robotB = []
-
+		self.geometry = None
 
 		self.parse(binary)
-		print(self.frame_number)
+		#print(self.frame_number)
 
 
 

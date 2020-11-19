@@ -28,24 +28,21 @@ class Robot:
 	def __init__(self, robotID, position):
 		self.robotID = robotID
 		self.position = position
-		self.commands = []
+		self.commands = CMD()
 
 
 
 
-	def add_cmd(self , cmd):
-		self.commands.append(cmd)
+	def set_cmd(self , cmd):
+		self.commands = cmd
+		#print(self.commands)
 	
 	def do_now(self , cmd):
 		self.do_commad(cmd)
 
 
 	def update(self):
-		for i in self.commands :
-			if(Maath.distance(i.point , self.position) < 1):
-				print("id : {0} , des :{1} ({2},{3}) - ({4} ,{5})".format(self.robotID , i.des , i.point.x , i.point.y , self.position.x , self.position.y))
-				print(Maath.distance(i.point , self.position))
-				self.do_commad(i)
+		self.do_commad(self.commands)
 
 	
 	def do_commad(self,cmd):
@@ -56,7 +53,8 @@ class Robot:
 		self.wheel4 = cmd.wheel4
 		self.veltangent = cmd.veltangent	
 		self.velnormal = cmd.velnormal		
-		self.velangular = cmd.velangular		
+		self.velangular = cmd.velangular
+		#print(self.to_string())
 	
 	def to_string(self):
 		return "id:{0} , \n\tkickspeedx:{1} , \n\tkickspeedy:{2} , \n\tveltangent:{3} , \n\tvelnormal:{4} , \n\tvelangular:{5}, \n\tspinner:{6} , \n\twheelsspeed:{7} , \n\twheel1:{8} , \n\twheel2:{9} , \n\twheel3:{10} , \n\twheel4:{11}\n\n".format(self.robotID,self.kickspeedx,self.kickspeedz,self.veltangent,self.velnormal,self.velangular,self.spinner,self.wheelsspeed,self.wheel1,self.wheel2,self.wheel3,self.wheel4)
